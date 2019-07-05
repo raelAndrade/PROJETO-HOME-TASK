@@ -38,9 +38,8 @@ public class Produto implements Serializable {
 	@Column(name="VALOR_PRODUTO")
 	private double valor;
 	
-	@JsonIgnore
 	@OneToMany(mappedBy = "produto")
-	private List<Imagem> imagens = new ArrayList<Imagem>();
+	private List<Imagem> imagens;
 
 	public Long getId() {
 		return id;

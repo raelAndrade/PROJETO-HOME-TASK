@@ -1,6 +1,7 @@
 package br.inpe.embrace.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ public interface ProdutoService {
 	
 	List<Produto> listar();
 	
-	Produto buscar(Long id);
+	Optional<Produto> buscar(Long id);
 	
 	Produto salvar(Produto produto);
 	
