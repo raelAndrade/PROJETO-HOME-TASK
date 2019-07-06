@@ -5,6 +5,7 @@
 
 ### Documentação API
 
+http://localhost:8080/swagger-ui.html
 
 ### Produtos - Endpoints
 
