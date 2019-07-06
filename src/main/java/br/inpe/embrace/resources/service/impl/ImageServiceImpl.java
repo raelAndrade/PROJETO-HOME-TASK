@@ -1,4 +1,4 @@
-package br.inpe.embrace.service.impl;
+package br.inpe.embrace.resources.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
-import br.inpe.embrace.domain.Imagem;
-import br.inpe.embrace.repositories.ImagemRepository;
-import br.inpe.embrace.service.ImagemService;
-import br.inpe.embrace.service.exception.ImagemNaoEncontradoException;
+import br.inpe.embrace.domain.service.ImagemService;
+import br.inpe.embrace.resources.entities.Imagem;
+import br.inpe.embrace.resources.repositories.ImagemRepository;
+import br.inpe.embrace.resources.service.impl.exceptions.ImagemNaoEncontradoException;
 
 @Service
 public class ImageServiceImpl implements ImagemService {
@@ -24,12 +24,11 @@ public class ImageServiceImpl implements ImagemService {
 
 	public Optional<Imagem> buscar(Long id) {
 		Optional<Imagem> imagem = imagemRepository.findById(id);
-		if(imagem == null) {throw new ImagemNaoEncontradoException("A imagem não pode ser encontrada");}
+		if(!imagem.isPresent()) {throw new ImagemNaoEncontradoException("A imagem não pode ser encontrada");}
 		return imagem;
 	}
 
 	public Imagem salvar(Imagem imagem) {
-		imagem.setId(null);
 		return imagemRepository.save(imagem);
 	}
 
@@ -42,13 +41,6 @@ public class ImageServiceImpl implements ImagemService {
 	}
 
 	public void atualizar(Imagem imagem) {
-		verificaSeExiste(imagem);
 		imagemRepository.save(imagem);
 	}
-
-	@Override
-	public void verificaSeExiste(Imagem imagem) {
-		buscar(imagem.getId());
-	}
-
 }

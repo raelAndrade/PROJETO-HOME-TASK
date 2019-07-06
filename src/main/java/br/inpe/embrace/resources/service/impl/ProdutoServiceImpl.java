@@ -1,4 +1,4 @@
-package br.inpe.embrace.service.impl;
+package br.inpe.embrace.resources.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
-import br.inpe.embrace.domain.Produto;
-import br.inpe.embrace.repositories.ProdutoRepository;
-import br.inpe.embrace.service.ProdutoService;
-import br.inpe.embrace.service.exception.ProdutoNaoEncontradoException;
+import br.inpe.embrace.domain.service.ProdutoService;
+import br.inpe.embrace.resources.entities.Produto;
+import br.inpe.embrace.resources.repositories.ProdutoRepository;
+import br.inpe.embrace.resources.service.impl.exceptions.ProdutoNaoEncontradoException;
 
 @Service
 public class ProdutoServiceImpl implements ProdutoService {
@@ -29,7 +29,6 @@ public class ProdutoServiceImpl implements ProdutoService {
 	}
 	
 	public Produto salvar(Produto produto) {
-		produto.setId(null);
 		return produtoRepository.save(produto);
 	}
 	
@@ -42,12 +41,6 @@ public class ProdutoServiceImpl implements ProdutoService {
 	}
 	
 	public void atualizar(Produto produto) {
-		verificaSeExiste(produto);
 		produtoRepository.save(produto);
 	}
-	
-	public void verificaSeExiste(Produto produto) {
-		buscar(produto.getId());
-	}
-
 }

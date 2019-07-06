@@ -1,4 +1,4 @@
-package br.inpe.embrace.service.exception;
+package br.inpe.embrace.resources.service.impl.exceptions;
 
 public class ImagemNaoEncontradoException extends RuntimeException {
 

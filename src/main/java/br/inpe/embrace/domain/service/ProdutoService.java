@@ -1,11 +1,11 @@
-package br.inpe.embrace.service;
+package br.inpe.embrace.domain.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import br.inpe.embrace.domain.Produto;
+import br.inpe.embrace.resources.entities.Produto;
 
 @Service
 public interface ProdutoService {
@@ -19,6 +19,4 @@ public interface ProdutoService {
 	void deletar(Long id);
 	
 	void atualizar(Produto produto);
-	
-	void verificaSeExiste(Produto produto);
 }
