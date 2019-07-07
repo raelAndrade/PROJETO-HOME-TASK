@@ -1,11 +1,19 @@
 # PROJETO HOME TASK - EMBRACE
 
+### Maven - Comando para inicializar a aplicação
+
+./mnvw spring-boot:run
+
 ### Acesso ao banco de dados em memoria
 * [Console H2](http://localhost:8080/h2-console)
 
 ### Documentação API
 
 http://localhost:8080/swagger-ui.html
+
+### Maven - Test
+
+./mnvw test
 
 ### Produtos - Endpoints
 
