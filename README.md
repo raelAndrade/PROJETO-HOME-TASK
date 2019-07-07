@@ -64,3 +64,68 @@ curl -X DELETE \
   -H 'cache-control: no-cache' \
   -H 'postman-token: b464c9b1-0feb-ccb3-896d-b71620248861'
 ```
+
+### Imagens - Endpoints
+
+```js
+@GET todos
+
+curl -X GET \
+  http://localhost:8080/api/v1/imagens \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: accec767-5ca7-ad01-6f72-dd84deffca41'
+
+```
+
+```js
+@GET por id
+
+curl -X GET \
+  http://localhost:8080/api/v1/imagens/1 \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: c6dd3774-47f4-bdaa-f4f7-f30d02293df5'
+
+```
+
+```js
+@POST
+
+curl -X POST \
+  http://localhost:8080/api/v1/imagens \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: fa45b099-7611-a281-983f-fba6dd29d62c' \
+  -d '{
+	"nome": "Infravermelho",
+	"localizacaoImagem": "/store/cbers/",
+	"produto": {
+		"id": 1
+	}
+}'
+
+```
+
+```js
+@PUT
+
+curl -X PUT \
+  http://localhost:8080/api/v1/imagens \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 388e5c7a-df5e-713f-6398-4b5d93e9a21e' \
+  -d '{
+	"nome": "Infravermelho - Alterado",
+	"localizacaoImagem": "/store/cbers/"
+}'
+
+```
+
+```js
+@DELETE
+
+curl -X DELETE \
+  http://localhost:8080/api/v1/imagens/2 \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 83234c73-b161-35a9-c635-8f1368b02539'
+
+```
