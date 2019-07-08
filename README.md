@@ -7,8 +7,8 @@
 ### Acesso ao banco de dados em memoria
 * [Console H2](http://localhost:8080/h2-console)
 
-OBS: Caso o console apresente o seguinte erro de conexão: "Database "mem:teste" not found, and IFEXISTS=true, so we cant auto-create it [90146-199] 90146/90146 (Help)"
-Inserir no campo JDBC URL: "jdbc:h2:mem:testdb".
+OBS: Caso o console apresente o seguinte erro de conexão: "Database "mem:teste" not found, and IFEXISTS=true, so we cant auto-create it [90146-199] 90146/90146 (Help)" -
+Inserir o seguinte parêmetro no campo JDBC URL: "jdbc:h2:mem:testdb".
 
 ### Documentação API
 
@@ -16,7 +16,7 @@ http://localhost:8080/swagger-ui.html
 
 ### Maven - Test
 
-./mnvw test
+./mvnw test
 
 ### Produtos - Endpoints
 
