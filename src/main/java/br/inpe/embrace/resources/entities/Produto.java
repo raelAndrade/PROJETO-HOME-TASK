@@ -12,6 +12,13 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+/**
+ * 
+ * @author Israel Andrade
+ * 
+ * Data de criação 7 de jul de 2019
+ */
+
 @Entity
 @Table(name = "TBL_PRODUTO")
 public final class Produto implements Serializable {

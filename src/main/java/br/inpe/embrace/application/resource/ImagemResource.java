@@ -23,6 +23,14 @@ import br.inpe.embrace.resources.entities.Imagem;
 import br.inpe.embrace.resources.service.impl.ImageServiceImpl;
 import br.inpe.embrace.resources.service.impl.ProdutoServiceImpl;
 
+/**
+ * Classe responsável pela criação dos endpoint dos recursos de imagens 
+ * 
+ * @author Israel Andrade
+ * 
+ * Data de criação 7 de jul de 2019
+ */
+
 @RestController
 @RequestMapping(
 	API + V1 + IMAGENS

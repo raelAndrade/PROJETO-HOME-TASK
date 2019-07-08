@@ -6,9 +6,11 @@ import br.inpe.embrace.resources.entities.Produto;
 
 /**
  * 
- * @author israel
- *
+ * @author Israel Andrade
+ * 
+ * Data de criação 7 de jul de 2019
  */
+
 public final class ImagemDTO implements Serializable{
 
 	private static final long serialVersionUID = 1L;

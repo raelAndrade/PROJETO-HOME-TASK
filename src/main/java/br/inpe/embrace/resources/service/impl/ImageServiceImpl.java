@@ -12,6 +12,13 @@ import br.inpe.embrace.resources.entities.Imagem;
 import br.inpe.embrace.resources.repositories.ImagemRepository;
 import br.inpe.embrace.resources.service.impl.exceptions.ImagemNaoEncontradoException;
 
+/**
+ * 
+ * @author Israel Andrade
+ * 
+ * Data de criação 7 de jul de 2019
+ */
+
 @Service
 public class ImageServiceImpl implements ImagemService {
 
@@ -36,7 +43,7 @@ public class ImageServiceImpl implements ImagemService {
 		try {
 			imagemRepository.deleteById(id);
 		}catch(EmptyResultDataAccessException e) {
-			throw new ImagemNaoEncontradoException("A imagem não pode ser deletado");
+			throw new ImagemNaoEncontradoException("A imagem não pode ser deletada");
 		}
 	}
 

@@ -12,6 +12,13 @@ import br.inpe.embrace.resources.entities.Produto;
 import br.inpe.embrace.resources.repositories.ProdutoRepository;
 import br.inpe.embrace.resources.service.impl.exceptions.ProdutoNaoEncontradoException;
 
+/**
+ * 
+ * @author Israel Andrade
+ * 
+ * Data de criação 7 de jul de 2019
+ */
+
 @Service
 public class ProdutoServiceImpl implements ProdutoService {
 	
@@ -24,7 +31,7 @@ public class ProdutoServiceImpl implements ProdutoService {
 	
 	public Optional<Produto> buscar(Long id) {
 		Optional<Produto> produto = produtoRepository.findById(id);
-		if(produto == null) {throw new ProdutoNaoEncontradoException("O produto não pode ser encontrado");}
+		if(!produto.isPresent()) {throw new ProdutoNaoEncontradoException("O produto não pode ser encontrado");}
 		return produto;
 	}
 	

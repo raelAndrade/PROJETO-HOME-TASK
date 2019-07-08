@@ -4,9 +4,11 @@ import java.io.Serializable;
 
 /**
  * 
- * @author israel
- *
+ * @author Israel Andrade
+ * 
+ * Data de criação 7 de jul de 2019
  */
+
 public final class ProdutoDTO implements Serializable{
 
 	private static final long serialVersionUID = 1L;

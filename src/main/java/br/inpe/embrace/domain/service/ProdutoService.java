@@ -7,6 +7,13 @@ import org.springframework.stereotype.Service;
 
 import br.inpe.embrace.resources.entities.Produto;
 
+/**
+ * 
+ * @author Israel Andrade
+ * 
+ * Data de criação 7 de jul de 2019
+ */
+
 @Service
 public interface ProdutoService {
 	
