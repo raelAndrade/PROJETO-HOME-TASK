@@ -1,5 +1,6 @@
 package br.inpe.embrace.resources.service.impl;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,9 +27,9 @@ public class ProdutoServiceImpl implements ProdutoService {
 	private ProdutoRepository produtoRepository;
 	
 	public List<Produto> listar(){
-		return produtoRepository.findAll();
+		return Collections.unmodifiableList(produtoRepository.findAll());
 	}
-	
+		
 	public Optional<Produto> buscar(Long id) {
 		Optional<Produto> produto = produtoRepository.findById(id);
 		if(!produto.isPresent()) {throw new ProdutoNaoEncontradoException("O produto não pode ser encontrado");}

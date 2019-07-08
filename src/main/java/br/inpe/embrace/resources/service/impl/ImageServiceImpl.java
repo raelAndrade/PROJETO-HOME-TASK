@@ -1,5 +1,6 @@
 package br.inpe.embrace.resources.service.impl;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,7 +27,7 @@ public class ImageServiceImpl implements ImagemService {
 	private ImagemRepository imagemRepository;
 	
 	public List<Imagem> listar() {
-		return imagemRepository.findAll();
+		return Collections.unmodifiableList(imagemRepository.findAll());
 	}
 
 	public Optional<Imagem> buscar(Long id) {
