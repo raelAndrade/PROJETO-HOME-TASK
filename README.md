@@ -37,10 +37,10 @@ tem uma integração muito boa com ele e só fica ativo durante o tempo de execu
 OBS: Caso o console apresente o seguinte erro de conexão: "Database "mem:teste" not found, and IFEXISTS=true, so we cant auto-create it [90146-199] 90146/90146 (Help)" -
 Inserir o seguinte parêmetro no campo JDBC URL: "jdbc:h2:mem:testdb".
 
-### Persistir dados em tempo de execução - ( Opcional )
+### Persistência dados em tempo de execução - ( Opcional )
 
-* Caso deseja persistir dados no banco de dados automaticamente durante a execução da aplicação, 
-descomentar as linhas de insert que está no script 'src/main/resources/data.sql'. 
+* Caso deseja persistir dados automaticamente durante a execução da aplicação, 
+descomentar as linhas de insert que está no script " src/main/resources/data.sql ". 
 
 ### Documentação API
 
