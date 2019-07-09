@@ -18,6 +18,11 @@ já a versão 1.5 terá a sua vida finalizada a partir de agosto).
 
 * Versão do Java: 8
 
+* Versão do Maven: 3.1.1
+
+* Banco de dados em memória: H2 (O H2 é um banco de dados em memória mais popular e o spring boot 
+tem uma integração muito boa com ele e só fica ativo durante o tempo de execução da aplicação).
+
 ### Maven - Comando para inicializar a aplicação
 
 ./mvnw spring-boot:run
