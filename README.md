@@ -6,8 +6,10 @@
 preparar a resposta a ser dada.
  
 * Aplicar boas práticas de programação para obter melhor legibilidade do código e fácil manutenção.
-	* Endentação
-	* Organização dos pacotes
+	* Endentação.
+	* Organização dos pacotes.
+	* Utilizar ferramenta para documentar a API.
+	* Convenções nos nomes para classes, métodos e variavéis.
 
 * Aplicar encapsulamento nas classes de abstrações.(Produto e Imagem), isso permite maior segurança nos dados.  
 
