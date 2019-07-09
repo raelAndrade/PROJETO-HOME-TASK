@@ -1,8 +1,23 @@
 # PROJETO HOME TASK - EMBRACE
 
+### Definições escolhidas
+
+* A aplicação consiste no modelo MVC, na qual, encontrar-se todas funcionalidades para atender as requisições HTTP, delegar as responsabilidades para outros componentes e 
+preparar a resposta a ser dada.
+ 
+* Aplicar boas práticas de programação para obter melhor legibilidade do código e fácil manutenção.
+	* Endentação
+	* Organização dos pacotes
+
+* Aplicar encapsulamento nas classes de abstrações.(Produto e Imagem), isso permite maior segurança nos dados.  
+
 ### Maven - Comando para inicializar a aplicação
 
 ./mvnw spring-boot:run
+
+### Maven - Comando para executar Test
+
+./mvnw test
 
 ### Acesso ao banco de dados em memoria
 * [Console H2](http://localhost:8080/h2-console)
@@ -13,10 +28,6 @@ Inserir o seguinte parêmetro no campo JDBC URL: "jdbc:h2:mem:testdb".
 ### Documentação API
 
 http://localhost:8080/swagger-ui.html
-
-### Maven - Test
-
-./mvnw test
 
 ### Produtos - Endpoints
 
