@@ -31,6 +31,10 @@ tem uma integração muito boa com ele e só fica ativo durante o tempo de execu
 
 ./mvnw test
 
+### Maven - Comando para gerar .jar
+
+./mvnw package
+
 ### Acesso ao banco de dados em memoria
 * [Console H2](http://localhost:8080/h2-console)
 
@@ -45,6 +49,21 @@ descomentar as linhas de insert que está no script " src/main/resources/data.sq
 ### Documentação API
 
 http://localhost:8080/swagger-ui.html
+
+### Deploy da aplicação no container Docker, execute os seguintes comando abaixo: 
+
+```js
+Constroi um container com base no arquivo Dockerfile
+
+sudo docker build -f Dockerfile -t docker-embrace .
+
+```
+
+```js
+Executa o container e sobe a aplicação na port 8081
+
+sudo docker run -p 8081:8081 docker-embrace
+```
 
 ### Produtos - Endpoints
 
